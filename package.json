@@ -10,7 +10,8 @@
   },
   "author": "",
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",

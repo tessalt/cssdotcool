@@ -1,93 +1,41 @@
 import React from 'react';
+import styleObj from './styles';
 import PropertyList from './components/property-list';
+import Router from 'react-router';
+
+var {Route, Link, RouteHandler} = Router;
+
+const styles = Object.keys(styleObj);
 
 class Main extends React.Component {
   render() {
-    var fonts = {
-      property: 'fontFamily',
-      examples: [
-        'Verdana,Geneva,sans-serif',
-        'Helvetica,Arial,sans-serif',
-        '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
-        '"Trebuchet MS", Helvetica, sans-serif',
-        'Georgia,Utopia,Charter,serif',
-        '"Times New Roman",Times,serif',
-        '"Courier New",Courier,monospace',
-        '"Palatino Linotype", "Book Antiqua", Palatino, serif',
-        '"Comic Sans MS", cursive, sans-serif',
-        'Impact, Charcoal, sans-serif'
-      ],
-      defaultStyles: {}
-    }
-    var borderStyles = {
-      property: 'borderStyle',
-      defaultStyles: {
-        borderWidth: '5px',
-        borderColor: 'lightblue'
-      },
-      examples: [
-        'solid',
-        'double',
-        'dotted',
-        'dashed',
-        'ridge',
-        'inset',
-        'outset',
-        'groove'
-      ]
-    }
-    var borderRadius = {
-      property: 'borderRadius',
-      defaultStyles: {
-        width: '100px',
-        height: '100px',
-        backgroundColor: 'blue'
-      },
-      examples: [
-        '5px',
-        '25px',
-        '50%'
-      ]
-    }
-    var boxShadow = {
-      property: 'boxShadow',
-      defaultStyles: {
-        width: '100px',
-        height: '100px'
-      },
-      examples: [
-        '0 0 5px #888',
-        '5px 5px 0 #888',
-        '5px 5px 5px #888',
-        '0 0 5px 2px magenta',
-        'inset 0 0 8px goldenrod'
-      ]
-    }
-    var textShadow = {
-      property: 'textShadow',
-      defaultStyles: {
-        fontSize: '36px',
-        fontWeight: 'bold',
-        color: 'lightgrey',
-        fontFamily: 'Arial'
-      },
-      examples: [
-        '2px 2px 2px #888',
-        '1px 1px 0 black',
-        '2px 2px 0px white, 4px 4px 0px #888',
-        '0px 0px 2px magenta'
-      ]
-    }
+    let links = styles.map(style => {
+      let params = {
+        style: style
+      }
+      return <p><Link to={style} params={params}>{style}</Link></p>;
+    });
     return (
       <div>
-        <PropertyList collection={fonts} />
-        <PropertyList collection={borderStyles} />
-        <PropertyList collection={borderRadius} />
-        <PropertyList collection={boxShadow} />
-        <PropertyList collection={textShadow} />
+        {links}
+        <RouteHandler {...this.props}/>
       </div>
     )
   }
 }
 
-React.render(<Main/>, document.getElementById('hello'));
+
+let paths = styles.map(style => {
+  return (<Route name={style} path=':style' handler={PropertyList}/> );
+});
+
+let routes = (
+  <Route name='main' path='/' handler={Main}>
+    {paths}
+  </Route>
+)
+
+Router.run(routes, (Handler, state) => {
+  var params = state.params;
+  React.render(<Handler params={params}/>, document.body);
+});
