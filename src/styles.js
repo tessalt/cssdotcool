@@ -73,6 +73,14 @@ const styles = {
       '2px 2px 0px white, 4px 4px 0px #888',
       '0px 0px 2px magenta'
     ]
+  },
+  fontStyle: {
+    property: 'fontStyle',
+    defaultStyles: {},
+    examples: [
+      'normal',
+      'italic'
+    ]
   }
 }
 

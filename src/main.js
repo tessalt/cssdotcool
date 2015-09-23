@@ -24,7 +24,6 @@ class Main extends React.Component {
   }
 }
 
-
 let paths = styles.map(style => {
   return (<Route name={style} path=':style' handler={PropertyList}/> );
 });
