@@ -13,7 +13,11 @@ class PropertyList extends React.Component {
         <header>
           <h1 className="mt0">{style.property}</h1>
         </header>
-        {collection}
+        <table>
+          <tbody>
+            {collection}
+          </tbody>
+        </table>
       </div>
     )
   }
