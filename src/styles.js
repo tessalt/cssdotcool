@@ -13,13 +13,14 @@ const styles = {
       '"Comic Sans MS", cursive, sans-serif',
       'Impact, Charcoal, sans-serif'
     ],
-    defaultStyles: {}
+    exampleText: "The quick brown fox jumps over the lazy dog"
   },
   borderStyle: {
     property: 'borderStyle',
     defaultStyles: {
       borderWidth: '5px',
-      borderColor: 'lightblue'
+      borderColor: 'plum',
+      color: 'white'
     },
     examples: [
       'solid',
@@ -37,7 +38,8 @@ const styles = {
     defaultStyles: {
       width: '100px',
       height: '100px',
-      backgroundColor: 'blue'
+      backgroundColor: 'MediumOrchid',
+      color: 'transparent'
     },
     examples: [
       '5px',
@@ -87,6 +89,7 @@ const styles = {
     defaultStyles: {
       width: '100px',
       height: '25px',
+      color: 'transparent'
     },
     examples: [
       "LightPink",

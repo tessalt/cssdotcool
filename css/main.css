@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+html,
+body,
+nav,
+.outer {
+  height: 100%;
+}
+
+.logo {
+  width: 200px;
+}
+
+nav {
+  background: #1f1e39;
+  max-width: 240px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #1f1e39 0%,#a41f70 100%);
+  float: left;
+}
+
+main {
+  float: left;
+  padding: 20px;
+  width: calc(100% - 240px);
+}

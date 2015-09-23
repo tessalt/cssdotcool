@@ -2,6 +2,7 @@ import React from 'react';
 import styleObj from './styles';
 import PropertyList from './components/property-list';
 import Router from 'react-router';
+import Logo from './components/logo';
 
 var {Route, Link, RouteHandler} = Router;
 
@@ -13,12 +14,19 @@ class Main extends React.Component {
       let params = {
         style: style
       }
-      return <p><Link to={style} params={params}>{style}</Link></p>;
+      return <li className="mb1"><Link to={style} params={params} className="white h5">{style}</Link></li>;
     });
     return (
-      <div>
-        {links}
-        <RouteHandler {...this.props}/>
+      <div className="outer">
+        <nav>
+          <Logo />
+          <ul className="list-reset">
+            {links}
+          </ul>
+        </nav>
+        <main>
+          <RouteHandler {...this.props}/>
+        </main>
       </div>
     )
   }

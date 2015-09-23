@@ -72,6 +72,10 @@
 
 	var _reactRouter2 = _interopRequireDefault(_reactRouter);
 
+	var _componentsLogo = __webpack_require__(199);
+
+	var _componentsLogo2 = _interopRequireDefault(_componentsLogo);
+
 	var Route = _reactRouter2['default'].Route;
 	var Link = _reactRouter2['default'].Link;
 	var RouteHandler = _reactRouter2['default'].RouteHandler;
@@ -95,20 +99,33 @@
 	          style: style
 	        };
 	        return _react2['default'].createElement(
-	          'p',
-	          null,
+	          'li',
+	          { className: 'mb1' },
 	          _react2['default'].createElement(
 	            Link,
-	            { to: style, params: params },
+	            { to: style, params: params, className: 'white h5' },
 	            style
 	          )
 	        );
 	      });
 	      return _react2['default'].createElement(
 	        'div',
-	        null,
-	        links,
-	        _react2['default'].createElement(RouteHandler, this.props)
+	        { className: 'outer' },
+	        _react2['default'].createElement(
+	          'nav',
+	          null,
+	          _react2['default'].createElement(_componentsLogo2['default'], null),
+	          _react2['default'].createElement(
+	            'ul',
+	            { className: 'list-reset' },
+	            links
+	          )
+	        ),
+	        _react2['default'].createElement(
+	          'main',
+	          null,
+	          _react2['default'].createElement(RouteHandler, this.props)
+	        )
 	      );
 	    }
 	  }]);
@@ -20520,13 +20537,14 @@
 	  fontFamily: {
 	    property: 'fontFamily',
 	    examples: ['Verdana,Geneva,sans-serif', 'Helvetica,Arial,sans-serif', '"Lucida Sans Unicode", "Lucida Grande", sans-serif', '"Trebuchet MS", Helvetica, sans-serif', 'Georgia,Utopia,Charter,serif', '"Times New Roman",Times,serif', '"Courier New",Courier,monospace', '"Palatino Linotype", "Book Antiqua", Palatino, serif', '"Comic Sans MS", cursive, sans-serif', 'Impact, Charcoal, sans-serif'],
-	    defaultStyles: {}
+	    exampleText: "The quick brown fox jumps over the lazy dog"
 	  },
 	  borderStyle: {
 	    property: 'borderStyle',
 	    defaultStyles: {
 	      borderWidth: '5px',
-	      borderColor: 'lightblue'
+	      borderColor: 'plum',
+	      color: 'white'
 	    },
 	    examples: ['solid', 'double', 'dotted', 'dashed', 'ridge', 'inset', 'outset', 'groove']
 	  },
@@ -20535,7 +20553,8 @@
 	    defaultStyles: {
 	      width: '100px',
 	      height: '100px',
-	      backgroundColor: 'blue'
+	      backgroundColor: 'MediumOrchid',
+	      color: 'transparent'
 	    },
 	    examples: ['5px', '25px', '50%']
 	  },
@@ -20556,6 +20575,20 @@
 	      fontFamily: 'Arial'
 	    },
 	    examples: ['2px 2px 2px #888', '1px 1px 0 black', '2px 2px 0px white, 4px 4px 0px #888', '0px 0px 2px magenta']
+	  },
+	  fontStyle: {
+	    property: 'fontStyle',
+	    defaultStyles: {},
+	    examples: ['normal', 'italic']
+	  },
+	  backgroundColor: {
+	    property: 'backgroundColor',
+	    defaultStyles: {
+	      width: '100px',
+	      height: '25px',
+	      color: 'transparent'
+	    },
+	    examples: ["LightPink", "Pink", "Crimson", "LavenderBlush", "PaleVioletRed", "HotPink", "DeepPink", "MediumVioletRed", "Orchid", "Thistle", "Plum", "Violet", "Magenta", "Fuchsia", "DarkMagenta", "Purple", "MediumOrchid", "DarkViolet", "DarkOrchid", "Indigo", "BlueViolet", "MediumPurple", "MediumSlateBlue", "SlateBlue", "DarkSlateBlue", "Lavender", "GhostWhite", "Blue", "MediumBlue", "MidnightBlue", "DarkBlue", "Navy", "RoyalBlue", "CornflowerBlue", "LightSteelBlue", "LightSlateGray", "SlateGray", "DodgerBlue", "AliceBlue", "SteelBlue", "LightSkyBlue", "SkyBlue", "DeepSkyBlue", "LightBlue", "PowderBlue", "CadetBlue", "Azure", "LightCyan", "PaleTurquoise", "Cyan", "Aqua", "DarkTurquoise", "DarkSlateGray", "DarkCyan", "Teal", "MediumTurquoise", "LightSeaGreen", "Turquoise", "Aquamarine", "MediumAquamarine", "MediumSpringGreen", "MintCream", "SpringGreen", "MediumSeaGreen", "SeaGreen", "Honeydew", "LightGreen", "PaleGreen", "DarkSeaGreen", "LimeGreen", "Color Name", "Lime", "ForestGreen", "Green", "DarkGreen", "Chartreuse", "LawnGreen", "GreenYellow", "DarkOliveGreen", "YellowGreen", "OliveDrab", "Beige", "LightGoldenrodYellow", "Ivory", "LightYellow", "Yellow", "Olive", "DarkKhaki", "LemonChiffon", "PaleGoldenrod", "Khaki", "Gold", "Cornsilk", "Goldenrod", "DarkGoldenrod", "FloralWhite", "OldLace", "Wheat", "Moccasin", "Orange", "PapayaWhip", "BlanchedAlmond", "NavajoWhite", "AntiqueWhite", "Tan", "BurlyWood", "Bisque", "DarkOrange", "Linen", "Peru", "PeachPuff", "SandyBrown", "Chocolate", "SaddleBrown", "Seashell", "Sienna", "LightSalmon", "Coral", "OrangeRed", "DarkSalmon", "Tomato", "MistyRose", "Salmon", "Snow", "LightCoral", "RosyBrown", "IndianRed", "Red", "Brown", "FireBrick", "DarkRed", "Maroon", "White", "WhiteSmoke", "Gainsboro", "LightGrey", "Silver", "DarkGray", "Gray", "DimGray", "Black"]
 	  }
 	};
 
@@ -20608,11 +20641,20 @@
 	    value: function render() {
 	      var style = _styles2['default'][this.props.params.style];
 	      var collection = style.examples.map(function (example) {
-	        return _react2['default'].createElement(_property2['default'], { example: example, name: style.property, defaultStyles: style.defaultStyles });
+	        return _react2['default'].createElement(_property2['default'], { example: example, name: style.property, defaultStyles: style.defaultStyles, exampleText: style.exampleText });
 	      });
 	      return _react2['default'].createElement(
 	        'div',
 	        null,
+	        _react2['default'].createElement(
+	          'header',
+	          null,
+	          _react2['default'].createElement(
+	            'h1',
+	            { className: 'mt0' },
+	            style.property
+	          )
+	        ),
 	        collection
 	      );
 	    }
@@ -20663,22 +20705,23 @@
 	    key: "render",
 	    value: function render() {
 	      var style = Object.assign({}, this.props.defaultStyles, _defineProperty({}, this.props.name, this.props.example));
+	      var text = this.props.exampleText || "Example";
 	      return _react2["default"].createElement(
 	        "div",
-	        null,
+	        { className: "clearfix mb2" },
 	        _react2["default"].createElement(
 	          "div",
-	          { className: "code" },
+	          { className: "col col-5 code" },
 	          _react2["default"].createElement(
 	            "code",
-	            null,
+	            { className: "h5" },
 	            this.props.example
 	          )
 	        ),
 	        _react2["default"].createElement(
 	          "div",
-	          { className: "demo", style: style },
-	          "Example"
+	          { className: "col col-7 demo", style: style },
+	          text
 	        )
 	      );
 	    }
@@ -23800,6 +23843,71 @@
 	}
 
 	module.exports = runRouter;
+
+/***/ },
+/* 199 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var Logo = (function (_React$Component) {
+	  _inherits(Logo, _React$Component);
+
+	  function Logo() {
+	    _classCallCheck(this, Logo);
+
+	    _get(Object.getPrototypeOf(Logo.prototype), "constructor", this).apply(this, arguments);
+	  }
+
+	  _createClass(Logo, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2["default"].createElement(
+	        "div",
+	        { className: "logo responsive-svg mb2" },
+	        _react2["default"].createElement(
+	          "svg",
+	          { x: "0px", y: "0px", viewBox: "0 0 85.3 17.3", "enable-background": "new 0 0 85.3 17.3" },
+	          _react2["default"].createElement(
+	            "g",
+	            null,
+	            _react2["default"].createElement("path", { fill: "#64BAE9", d: "M8.7,0c2.4,0,4.2,0.7,5.8,2.2c0.2,0.2,0.2,0.5,0,0.7l-1.9,1.9C12.5,5,12.2,5,12,4.8C11,4,10,3.6,8.8,3.6 c-2.7,0-4.7,2.3-4.7,4.9c0,2.7,2,4.9,4.7,4.9c1.3,0,2.4-0.4,3.2-1.2c0.2-0.1,0.5-0.1,0.6,0l1.9,2c0.2,0.2,0.1,0.5,0,0.6 c-1.6,1.6-3.7,2.3-5.8,2.3C3.9,17.3,0,13.5,0,8.7C0,3.9,3.9,0,8.7,0z" }),
+	            _react2["default"].createElement("path", { fill: "#64BAE9", d: "M16.5,15.4c-0.2-0.2-0.3-0.4-0.1-0.7l1.1-1.9c0.2-0.3,0.6-0.3,0.8-0.1c0.7,0.5,1.9,1.3,3.4,1.3 c1,0,1.7-0.6,1.7-1.4c0-1-0.9-1.7-2.5-2.4c-2.3-1.1-4.7-2.4-4.7-5.3c0-2.4,1.8-4.8,5.5-4.8c2.5,0,4.4,1.3,5.1,1.8 c0.3,0.2,0.2,0.6,0.1,0.8l-1.2,1.8c-0.2,0.3-0.6,0.5-1.1,0.2c-0.6-0.4-2-1.3-3.2-1.3c-1,0-1.5,0.6-1.5,1.3c0,0.8,0.9,1.4,2.6,2.2 c2.1,1,4.8,2.2,4.8,5.5c0,2.5-2.1,5-5.7,5C18.8,17.3,17,16,16.5,15.4z" }),
+	            _react2["default"].createElement("path", { fill: "#64BAE9", d: "M29.8,15.4c-0.2-0.2-0.3-0.4-0.1-0.7l1.1-1.9c0.2-0.3,0.6-0.3,0.8-0.1c0.7,0.5,1.9,1.3,3.4,1.3 c1,0,1.7-0.6,1.7-1.4c0-1-0.9-1.7-2.5-2.4c-2.3-1.1-4.7-2.4-4.7-5.3c0-2.4,1.8-4.8,5.5-4.8c2.5,0,4.4,1.3,5.1,1.8 c0.3,0.2,0.2,0.6,0.1,0.8l-1.2,1.8c-0.2,0.3-0.6,0.5-1.1,0.2c-0.6-0.4-2-1.3-3.2-1.3c-1,0-1.5,0.6-1.5,1.3c0,0.8,0.9,1.4,2.6,2.2 c2.1,1,4.8,2.2,4.8,5.5c0,2.5-2.1,5-5.7,5C32,17.3,30.3,16,29.8,15.4z" }),
+	            _react2["default"].createElement("path", { fill: "#FEDA24", d: "M44.3,13.3c1.1,0,2,0.9,2,2c0,1.1-0.9,2-2,2s-2-0.9-2-2C42.3,14.2,43.2,13.3,44.3,13.3z" }),
+	            _react2["default"].createElement("path", { fill: "#a41f70", d: "M52.4,7.1c1.4,0,2.4,0.4,3.4,1.3c0.1,0.1,0.1,0.3,0,0.4l-1.1,1.1c-0.1,0.1-0.3,0.1-0.3,0 c-0.6-0.5-1.2-0.7-1.9-0.7c-1.6,0-2.7,1.3-2.7,2.9c0,1.6,1.2,2.8,2.8,2.8c0.8,0,1.4-0.2,1.9-0.7c0.1-0.1,0.3-0.1,0.4,0l1.1,1.2 c0.1,0.1,0.1,0.3,0,0.4c-1,0.9-2.2,1.4-3.4,1.4c-2.8,0-5.1-2.2-5.1-5C47.4,9.4,49.6,7.1,52.4,7.1z" }),
+	            _react2["default"].createElement("path", { fill: "#a41f70", d: "M61.7,7.1c2.8,0,5,2.3,5,5.1c0,2.8-2.2,5-5,5s-5-2.2-5-5C56.6,9.4,58.9,7.1,61.7,7.1z M61.7,14.9 c1.5,0,2.8-1.3,2.8-2.8c0-1.5-1.3-2.8-2.8-2.8c-1.5,0-2.8,1.3-2.8,2.8C58.9,13.7,60.1,14.9,61.7,14.9z" }),
+	            _react2["default"].createElement("path", { fill: "#a41f70", d: "M72.8,7.1c2.8,0,5,2.3,5,5.1c0,2.8-2.2,5-5,5s-5-2.2-5-5C67.8,9.4,70,7.1,72.8,7.1z M72.8,14.9 c1.5,0,2.8-1.3,2.8-2.8c0-1.5-1.3-2.8-2.8-2.8c-1.5,0-2.8,1.3-2.8,2.8C70,13.7,71.3,14.9,72.8,14.9z" }),
+	            _react2["default"].createElement("path", { fill: "#a41f70", d: "M79.5,7.5c0-0.1,0.1-0.3,0.3-0.3h1.7c0.1,0,0.3,0.1,0.3,0.3V15H85c0.2,0,0.3,0.1,0.3,0.3v1.5 c0,0.1-0.1,0.3-0.3,0.3h-5.3c-0.2,0-0.3-0.1-0.3-0.3V7.5z" })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Logo;
+	})(_react2["default"].Component);
+
+	exports["default"] = Logo;
+	module.exports = exports["default"];
 
 /***/ }
 /******/ ]);

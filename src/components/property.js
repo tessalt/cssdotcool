@@ -5,15 +5,16 @@ class Property extends React.Component {
     let style = Object.assign({}, this.props.defaultStyles, {
       [this.props.name]: this.props.example
     });
+    let text = this.props.exampleText || "Example";
     return (
-      <div>
-        <div className="code">
-          <code>
+      <div className="clearfix mb2">
+        <div className="col col-5 code">
+          <code className="h5">
             {this.props.example}
           </code>
         </div>
-        <div className="demo" style={style}>
-          Example
+        <div className="col col-7 demo" style={style}>
+          {text}
         </div>
       </div>
     )
