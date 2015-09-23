@@ -6,7 +6,7 @@ class PropertyList extends React.Component {
   render() {
     let style = styles[this.props.params.style];
     let collection = style.examples.map(example => {
-      return <Property example={example} name={style.property} defaultStyles={style.defaultStyles} exampleText={style.exampleText}/>
+      return <Property example={example} name={style.property} {...style}/>
     });
     return (
       <div>
