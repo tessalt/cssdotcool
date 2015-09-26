@@ -6,6 +6,9 @@ A fun resource for helping learners get creative with CSS.
 - node
 
 ## To run locally
+`npm install -g webpack`
+
+`npm install -g webpack-dev-server`
 
 `npm install`
 
