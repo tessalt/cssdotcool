@@ -2,6 +2,7 @@ const styles = {
    fontFamily: {
     title: 'Font families',
     property: 'fontFamily',
+    cssName: 'font-family',
     examples: [
       'Verdana,Geneva,sans-serif',
       'Helvetica,Arial,sans-serif',
@@ -19,6 +20,7 @@ const styles = {
   borderStyle: {
     title: 'Border styles',
     property: 'borderStyle',
+    cssName: 'border-style',
     defaultStyles: {
       borderWidth: '5px',
       borderColor: 'plum',
@@ -37,6 +39,7 @@ const styles = {
   },
   borderRadius: {
     title: 'Border radii',
+    cssName: 'border-radius',
     property: 'borderRadius',
     defaultStyles: {
       width: '100px',
@@ -53,6 +56,7 @@ const styles = {
   boxShadow: {
     title: 'Box shadows',
     property: 'boxShadow',
+    cssName: 'box-shadow',
     defaultStyles: {
       width: '100px',
       height: '100px'
@@ -68,6 +72,7 @@ const styles = {
   textShadow: {
     title: 'Text shadows',
     property: 'textShadow',
+    cssName: 'text-shadow',
     defaultStyles: {
       fontSize: '36px',
       fontWeight: 'bold',
@@ -84,6 +89,7 @@ const styles = {
   fontStyle: {
     title: 'Font styles',
     property: 'fontStyle',
+    cssName: 'font-style',
     defaultStyles: {},
     examples: [
       'normal',
@@ -93,6 +99,7 @@ const styles = {
   backgroundColor: {
     title: 'Colours',
     property: 'backgroundColor',
+    cssName: 'background-color',
     defaultStyles: {
       width: '100px',
       height: '25px',

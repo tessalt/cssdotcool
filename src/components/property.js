@@ -16,7 +16,7 @@ class Property extends React.Component {
           <ReactZeroClipboard 
             text={this.props.example}
             onCopy={this.afterCopy.bind(this)}>
-            <code className='property-code'>{this.props.example}</code>
+       <code className='property-code'>{this.props.cssName}: {this.props.example};</code>
           </ReactZeroClipboard>
         </td>
         <td><div style={style}>{text}</div></td>
