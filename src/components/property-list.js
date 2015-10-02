@@ -33,7 +33,7 @@ class PropertyList extends React.Component {
     return (
       <div>
         <header>
-          <h1 className="mt0">{style.property}</h1>
+          <h1 className="mt0">{style.title}</h1>
         </header>
         <table>
           <tbody>

@@ -1,5 +1,6 @@
 const styles = {
    fontFamily: {
+    title: 'Font families',
     property: 'fontFamily',
     examples: [
       'Verdana,Geneva,sans-serif',
@@ -16,6 +17,7 @@ const styles = {
     exampleText: "The quick brown fox jumps over the lazy dog"
   },
   borderStyle: {
+    title: 'Border styles',
     property: 'borderStyle',
     defaultStyles: {
       borderWidth: '5px',
@@ -34,6 +36,7 @@ const styles = {
     ]
   },
   borderRadius: {
+    title: 'Border radii',
     property: 'borderRadius',
     defaultStyles: {
       width: '100px',
@@ -48,6 +51,7 @@ const styles = {
     ]
   },
   boxShadow: {
+    title: 'Box shadows',
     property: 'boxShadow',
     defaultStyles: {
       width: '100px',
@@ -62,6 +66,7 @@ const styles = {
     ]
   },
   textShadow: {
+    title: 'Text shadows',
     property: 'textShadow',
     defaultStyles: {
       fontSize: '36px',
@@ -77,6 +82,7 @@ const styles = {
     ]
   },
   fontStyle: {
+    title: 'Font styles',
     property: 'fontStyle',
     defaultStyles: {},
     examples: [
@@ -85,6 +91,7 @@ const styles = {
     ]
   },
   backgroundColor: {
+    title: 'Colours',
     property: 'backgroundColor',
     defaultStyles: {
       width: '100px',
