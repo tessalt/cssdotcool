@@ -28,3 +28,7 @@ main {
   padding: 20px;
   width: calc(100% - 240px);
 }
+
+.property-code {
+  cursor: pointer;
+}

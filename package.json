@@ -12,7 +12,8 @@
   "dependencies": {
     "basscss": "^7.0.4",
     "react": "^0.13.3",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "react-zeroclipboard": "^1.1.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",

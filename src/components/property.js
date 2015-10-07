@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactZeroClipboard from 'react-zeroclipboard';
 
 class Property extends React.Component {
   render() {
@@ -8,7 +9,11 @@ class Property extends React.Component {
     let text = this.props.exampleText || "Example";
     return (
       <tr>
-        <td><code>{this.props.example}</code></td>
+        <td>
+          <ReactZeroClipboard text={this.props.example}>
+            <code className='property-code'>{this.props.example}</code>
+          </ReactZeroClipboard>
+        </td>
         <td><div style={style}>{text}</div></td>
       </tr>
     )

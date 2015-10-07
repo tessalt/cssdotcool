@@ -14,7 +14,11 @@ class Main extends React.Component {
       let params = {
         style: style
       }
-      return <li className="mb1"><Link to={style} params={params} className="white h5">{style}</Link></li>;
+      return (
+        <li key={style} className="mb1">
+          <Link to={style} params={params} className="white h5">{style}</Link>
+        </li>
+      );
     });
     return (
       <div className="outer">
@@ -33,7 +37,7 @@ class Main extends React.Component {
 }
 
 let paths = styles.map(style => {
-  return (<Route name={style} path=':style' handler={PropertyList}/> );
+  return (<Route key={style} name={style} path=':style' handler={PropertyList}/> );
 });
 
 let routes = (
