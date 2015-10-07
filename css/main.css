@@ -32,3 +32,16 @@ main {
 .property-code {
   cursor: pointer;
 }
+
+.notification {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #331E41;
+  transition: opacity .5s;
+}
+
+.notification.js-is-active {
+  opacity: 1;
+}

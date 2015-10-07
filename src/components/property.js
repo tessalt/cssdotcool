@@ -2,6 +2,9 @@ import React from 'react';
 import ReactZeroClipboard from 'react-zeroclipboard';
 
 class Property extends React.Component {
+  afterCopy() {
+    this.props.afterCopy();
+  }
   render() {
     let style = Object.assign({}, this.props.defaultStyles, {
       [this.props.name]: this.props.example
@@ -10,7 +13,9 @@ class Property extends React.Component {
     return (
       <tr>
         <td>
-          <ReactZeroClipboard text={this.props.example}>
+          <ReactZeroClipboard 
+            text={this.props.example}
+            onCopy={this.afterCopy.bind(this)}>
             <code className='property-code'>{this.props.example}</code>
           </ReactZeroClipboard>
         </td>
