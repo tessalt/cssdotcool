@@ -43,7 +43,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         <h1>Hello World!</h1>
-        <h2>&larr; Add some Style with CSS Properties</h2>
+        <h2><span className='arrow'>&larr;</span> Add some Style with CSS Properties</h2>
       </div>
     )
   }

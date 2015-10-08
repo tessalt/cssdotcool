@@ -37,7 +37,7 @@ class PropertyList extends React.Component {
         <header>
           <h1 className='mt0'>{style.title}</h1>
         </header>
-        <table className='table-light'>
+        <table>
           <tbody>
             {collection}
           </tbody>

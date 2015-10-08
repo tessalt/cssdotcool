@@ -42,7 +42,7 @@ main {
   position: absolute;
   top: 20px;
   right: 20px;
-  background-color: #331E41;
+  background-color: cyan;
   transition: opacity .5s;
 }
 
@@ -84,4 +84,16 @@ table {
   font-family: "Courier New",Courier,monospace;
   color: white;
   margin-top: 80px;
+}
+
+.arrow {
+  font-size: 60px;
+  animation: pulse 1s infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse {
+  from { transform: none; }
+	50% { transform: scale(1.4); }
+	to { transform: none; }
 }
