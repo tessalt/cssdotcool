@@ -96,6 +96,19 @@ const styles = {
       'italic'
     ]
   },
+  alignment: {
+    title: 'Text alignment',
+    property: 'textAlign',
+    cssName: 'text-align',
+    defaultStyles: {
+      backgroundColor: 'aliceblue'
+    },
+    examples: [
+      'left',
+      'right',
+      'center'
+    ]
+  },
   backgroundColor: {
     title: 'Colours',
     property: 'backgroundColor',

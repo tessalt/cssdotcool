@@ -12,7 +12,6 @@ class PropertyList extends React.Component {
   }
 
   afterPropCopy() {
-    console.log('copied?');
     this.setState({
       showNotification: true,
     });
@@ -38,7 +37,7 @@ class PropertyList extends React.Component {
         <header>
           <h1 className='mt0'>{style.title}</h1>
         </header>
-        <table>
+        <table className='table-light'>
           <tbody>
             {collection}
           </tbody>

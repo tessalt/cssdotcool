@@ -9,6 +9,7 @@ body,
 nav,
 .outer {
   height: 100%;
+  overflow: hidden;
 }
 
 .logo {
@@ -27,6 +28,8 @@ main {
   float: left;
   padding: 20px;
   width: calc(100% - 240px);
+  height: 100%;
+  overflow: scroll;
 }
 
 .property-code {
