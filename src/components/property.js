@@ -10,13 +10,14 @@ class Property extends React.Component {
       [this.props.name]: this.props.example
     });
     let text = this.props.exampleText || "Example";
+    let copyText = `${this.props.cssName}: ${this.props.example};`;
     return (
       <tr>
         <td>
-          <ReactZeroClipboard 
-            text={this.props.example}
-            onCopy={this.afterCopy.bind(this)}>
-       <code className='property-code'>{this.props.cssName}: {this.props.example};</code>
+          <ReactZeroClipboard
+            text={copyText}
+            onAfterCopy={this.afterCopy.bind(this)}>
+              <code className='property-code'>{copyText}</code>
           </ReactZeroClipboard>
         </td>
         <td><div style={style}>{text}</div></td>

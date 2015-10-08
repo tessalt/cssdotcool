@@ -6,34 +6,37 @@ import CopyNotification from './copy-notification';
 class PropertyList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      showNotification: false
+    this.state = {
+      showNotification: false,
     };
   }
+
   afterPropCopy() {
+    console.log('copied?');
     this.setState({
-      showNotification: true
+      showNotification: true,
     });
     setTimeout(() => {
       this.setState({
-        showNotification: false
-      })
+        showNotification: false,
+      });
     }, 1500);
   }
+
   render() {
     let style = styles[this.props.params.style];
     let collection = style.examples.map(example => {
-      return <Property 
-                afterCopy={this.afterPropCopy.bind(this)} 
-                key={example} 
-                example={example} 
-                name={style.property} 
-                {...style}/>
+      return <Property
+                afterCopy={this.afterPropCopy.bind(this)}
+                key={example}
+                example={example}
+                name={style.property}
+                {...style}/>;
     });
     return (
       <div>
         <header>
-          <h1 className="mt0">{style.title}</h1>
+          <h1 className='mt0'>{style.title}</h1>
         </header>
         <table>
           <tbody>
@@ -42,7 +45,7 @@ class PropertyList extends React.Component {
         </table>
         <CopyNotification show={this.state.showNotification} />
       </div>
-    )
+    );
   }
 }
 

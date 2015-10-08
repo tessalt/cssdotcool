@@ -16,7 +16,7 @@ class Main extends React.Component {
       }
       return (
         <li key={style} className="mb1">
-          <Link to={style} params={params} className="white h5">{style}</Link>
+          <Link to={style} params={params} className="white h5">{styleObj[style].title}</Link>
         </li>
       );
     });
