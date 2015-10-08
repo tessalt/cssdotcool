@@ -109,6 +109,20 @@ const styles = {
       'center'
     ]
   },
+  transform: {
+    title: 'Transform',
+    property: 'transform',
+    cssName: 'transform',
+    defaultStyles: {
+      backgroundColor: 'cyan',
+      display: 'inline-block'
+    },
+    examples: [
+      'rotate(30deg)',
+      'skewX(50deg)',
+      'skewY(25deg)'
+    ]
+  },
   backgroundColor: {
     title: 'Colours',
     property: 'backgroundColor',
