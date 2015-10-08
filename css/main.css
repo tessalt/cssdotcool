@@ -30,6 +30,7 @@ main {
   width: calc(100% - 240px);
   height: 100%;
   overflow: scroll;
+  background: #1B0E25;
 }
 
 .property-code {
@@ -47,4 +48,40 @@ main {
 
 .notification.js-is-active {
   opacity: 1;
+}
+
+header h1 {
+  color: white;
+}
+
+table {
+  background-color: white;
+  padding: 20px;
+}
+
+.home {
+  background-color: black;
+  text-align: center;
+  height: 100%;
+  padding: 50px;
+}
+
+.home h1 {
+  font-family: "Courier New",Courier,monospace;
+  margin: 0;
+  color: white;
+  background: #2A1E3E;
+  line-height: 1;
+  font-size: 100px;
+  text-shadow: 10px 10px 0px #981F6B, 15px 15px 0px #FEBE3D;
+  border: 3px dotted #A11F6F;
+  padding: 30px 30px 40px 30px;
+  border-radius: 30px;
+  box-shadow: 0 0 45px 2px cyan;
+}
+
+.home h2 {
+  font-family: "Courier New",Courier,monospace;
+  color: white;
+  margin-top: 80px;
 }

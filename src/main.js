@@ -23,7 +23,9 @@ class Main extends React.Component {
     return (
       <div className="outer">
         <nav>
-          <Logo />
+          <Link to='/'>
+            <Logo />
+          </Link>
           <ul className="list-reset">
             {links}
           </ul>
@@ -36,12 +38,24 @@ class Main extends React.Component {
   }
 }
 
+class Home extends React.Component {
+  render() {
+    return (
+      <div className="home">
+        <h1>Hello World!</h1>
+        <h2>&larr; Add some Style with CSS Properties</h2>
+      </div>
+    )
+  }
+}
+
 let paths = styles.map(style => {
   return (<Route key={style} name={style} path=':style' handler={PropertyList}/> );
 });
 
 let routes = (
   <Route name='main' path='/' handler={Main}>
+    <Route name="home" path='/' handler={Home} />
     {paths}
   </Route>
 )
