@@ -19,22 +19,22 @@ const styles = {
   },
   borderStyle: {
     title: 'Border styles',
-    property: 'borderStyle',
-    cssName: 'border-style',
+    property: 'border',
+    cssName: 'border',
     defaultStyles: {
       borderWidth: '5px',
       borderColor: 'plum',
       color: 'white'
     },
     examples: [
-      'solid',
-      'double',
-      'dotted',
-      'dashed',
-      'ridge',
-      'inset',
-      'outset',
-      'groove'
+      '5px solid plum',
+      '5px double plum',
+      '5px dotted plum',
+      '5px dashed plum',
+      '5px ridge plum',
+      '5px inset plum',
+      '5px outset plum',
+      '5px groove plum'
     ]
   },
   borderRadius: {
