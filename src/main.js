@@ -1,6 +1,7 @@
 import React from 'react';
-import styleObj from './styles';
+import styleObj from './data/styles';
 import PropertyList from './components/property-list';
+import ColorsList from './components/colors-list';
 import Router from 'react-router';
 import Logo from './components/logo';
 
@@ -28,11 +29,14 @@ class Main extends React.Component {
           </Link>
           <ul className="list-reset">
             {links}
+            <li className="mb1">
+              <Link to='/colors' className="white h5">Colors</Link>
+            </li>
           </ul>
         </nav>
-        <main>
+        <div className="main">
           <RouteHandler {...this.props}/>
-        </main>
+        </div>
       </div>
     )
   }
@@ -56,6 +60,7 @@ let paths = styles.map(style => {
 let routes = (
   <Route name='main' path='/' handler={Main}>
     <Route name="home" path='/' handler={Home} />
+    <Route name='colors' path='colors' handler={ColorsList} />
     {paths}
   </Route>
 )

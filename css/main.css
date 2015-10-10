@@ -4,12 +4,17 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+body {
+  background: #1B0E25;
+}
+
 html,
 body,
 nav,
-.outer {
+.outer,
+.main {
   height: 100%;
-  overflow: hidden;
 }
 
 .logo {
@@ -21,16 +26,14 @@ nav {
   max-width: 240px;
   padding: 20px;
   background: linear-gradient(to bottom, #1f1e39 0%,#a41f70 100%);
-  float: left;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
-main {
-  float: left;
+.main {
   padding: 20px;
-  width: calc(100% - 240px);
-  height: 100%;
-  overflow: scroll;
-  background: #1B0E25;
+  padding-left: 260px;
 }
 
 .property-code {
@@ -60,9 +63,7 @@ table {
 }
 
 .home {
-  background-color: black;
   text-align: center;
-  height: 100%;
   padding: 50px;
 }
 
@@ -96,4 +97,11 @@ table {
   from { transform: none; }
 	50% { transform: scale(1.4); }
 	to { transform: none; }
+}
+
+.switch-btns {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
 }

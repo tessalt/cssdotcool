@@ -1,6 +1,6 @@
 import React from 'react';
 import Property from './property';
-import styles from '../styles';
+import styles from '../data/styles';
 import CopyNotification from './copy-notification';
 
 class PropertyList extends React.Component {
@@ -23,7 +23,7 @@ class PropertyList extends React.Component {
   }
 
   render() {
-    let style = styles[this.props.params.style];
+    let style = this.props.style || styles[this.props.params.style];
     let collection = style.examples.map(example => {
       return <Property
                 afterCopy={this.afterPropCopy.bind(this)}
