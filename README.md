@@ -25,3 +25,7 @@ Will build output to bundle.js
 ## Adding new CSS property examples
 
 1. edit styles.js with a CSS property name (camelcased instead of dashes) and an array of example values for that property. You can set up other styles for each example using the `defaultStyles` property.
+
+## To use offline
+
+Click the "download zip" button, extract, and open index.html in your browser.
