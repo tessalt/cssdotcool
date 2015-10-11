@@ -28,6 +28,9 @@ class Main extends React.Component {
             <li className="mb1">
               <Link to='/colors' className="white h5">Colors</Link>
             </li>
+            <li className="mb1">
+              <Link to='/colorpicker' className="white h5">Colour Picker</Link>
+            </li>
           </ul>
         </nav>
         <div className="main">
