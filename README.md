@@ -26,6 +26,13 @@ Will build output to bundle.js
 
 1. edit styles.js with a CSS property name (camelcased instead of dashes) and an array of example values for that property. You can set up other styles for each example using the `defaultStyles` property.
 
+## Adding new pages
+
+1. Create a new component in ./src/components
+2. Imoprt your component into index.js
+3. Add a new `<Route>`  component to `routes` in index.js, with `handler` property set to your component
+4. Import your component to main.js and add a new `<link>` component to `links`
+
 ## To use offline
 
 Click the "download zip" button, extract, and open index.html in your browser.
