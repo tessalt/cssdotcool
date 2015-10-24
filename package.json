@@ -6,7 +6,8 @@
   "scripts": {
     "server": "webpack-dev-server --progress --colors",
     "open": "open http://localhost:8080/webpack-dev-server/",
-    "build": "webpack"
+    "build": "webpack",
+    "zip": "mkdir temp temp/css && cp index.html bundle.js temp/ && cp css/* temp/css/ && zip -r bundle.zip temp && rm -rf temp"
   },
   "author": "",
   "dependencies": {
