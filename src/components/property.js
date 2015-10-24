@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactZeroClipboard from 'react-zeroclipboard';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 class Property extends React.Component {
   afterCopy() {
@@ -14,16 +14,14 @@ class Property extends React.Component {
     return (
       <tr>
         <td>
-          <ReactZeroClipboard
-            text={copyText}
-            onAfterCopy={this.afterCopy.bind(this)}>
-              <code className='property-code'>{copyText}</code>
-          </ReactZeroClipboard>
+        <CopyToClipboard text={copyText}
+          onCopy={this.afterCopy.bind(this)}>
+          <code className='property-code'>{copyText}</code>
+        </CopyToClipboard>
         </td>
         <td><div style={style}>{text}</div></td>
       </tr>
     )
   }
 }
-
 export default Property;

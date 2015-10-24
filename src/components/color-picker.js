@@ -1,7 +1,7 @@
 import React from 'react';
 import ColorPicker from 'react-color-picker';
-import ReactZeroClipboard from 'react-zeroclipboard';
 import CopyNotification from './copy-notification';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 class ColorPickerPage extends React.Component {
   constructor(props) {
@@ -37,11 +37,11 @@ class ColorPickerPage extends React.Component {
           <div className="border current-color" style={{background: this.state.color}}>
           </div>
           <input type="text" value={this.state.color}  className="field inline-block mt1"/>
-          <ReactZeroClipboard
+          <CopyToClipboard
             text={this.state.color}
-            onAfterCopy={this.afterCopy.bind(this)}>
+            onCopy={this.afterCopy.bind(this)}>
             <button className="btn btn-primary inlie-block ml1 mt1 bg-purple">Copy</button>
-          </ReactZeroClipboard>
+          </CopyToClipboard>
           <CopyNotification show={this.state.showNotification} />
         </div>
       </div>
